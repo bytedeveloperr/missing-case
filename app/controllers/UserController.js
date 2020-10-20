@@ -4,7 +4,7 @@ class UserController {
 	
 	async singleUser(req, res) {
 		let result = await UserService.getSingleUser(req.session._id)
-		res.render("profile", { title: "Browse Users", data: result.data })
+		res.render("profile", { title: result.data.fullName, data: result.data })
 	}
 
 	async updateUser(req, res) {
