@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title><%- title %></title>
+	<style type="text/css">
+		* {
+			font-family: 'Noto Sans JP', sans-serif;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<%- include("../partials/topbar"); %>
+	<div class="container">
+		<%- body %>
+	</div>
+</div>
+<script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<%- layout("./layouts/main") %>
+
+<div class="row">
+	<div class="col-md-10 offset-md-1">
+		<div class="card mb-3">
+		  <div class="card-body">
+		  	<div class="row">
+		  		<div class="col-lg-4">
+		  			<h4 class="font-weight-bold mb-3"><%= data.fullName %></h4>
+		  			<img class="mb-3" style="width: 100%;" src="<%= data.image %>" alt="<%= data.fullName %>">
+		  		</div>
+		  		<div class="col-lg-8"> 
+				  	<ul class="list-group list-group-flush">
+				  		<li class="list-group-item bg-white text-dark"><strong>Residential Address:</strong> <%= data.residentialAddress %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Last seen Address:</strong> <%= data.lastAddress %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Last seen State:</strong> <%= data.lastState %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Last seen Date:</strong> <%= data.lastSeen %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Languages:</strong> <%= data.languages %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Special Characteristics:</strong> <%= data.specialChar %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Last cloth:</strong> <%= data.lastCloth %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Gender:</strong> <%= data.gender %></li>
+				  		<li class="list-group-item bg-white text-dark"><strong>Age:</strong> <%= data.age %></li>
+				  	</ul>
+
+				  	<h4 class="my-3">Contact Reporter</h4>
+				  	<div class="row">
+				  		<div class="col-6">
+				  			<a href="mailto:<%= data.reporter.email %>" class="btn btn-danger btn-block"><i class="fa fa-envelope"></i>  Email</a>        
+				  		</div>
+				  		<% if(data.reporter.phone !== ""){%>
+				  		<div class="col-6">
+				  			<a href="tel:<%= data.reporter.phone %>" class="btn btn-info btn-block"><i class="fa fa-phone"></i> Call</a>
+				  		</div>
+				  		<%}%>
+				  	</div>
+		  		</div>
+		  		<div class="alert alert-danger mt-3 mb-0">
+		  			<strong>Please Note:</strong> If you make or have already made contact with this missing person, help us by contacting the reporter or report at the nearest police station
+		  		</div>
+		  	</div>
+		  </div>
+		</div>
+	</div>
+</div>

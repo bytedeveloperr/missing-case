@@ -1,0 +1,25 @@
+<%- layout("./layouts/main") %>
+
+<div class="row">
+	<div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+		<div class="card mt-5">
+		  <div class="card-body">
+		    <h4 class="card-title">Log in to continue</h4>
+		    <form class="" method="post" action="/login">
+		    	<%- include("./partials/errors") %>
+		    	<div class="form-group">
+				  <label class="col-form-label" for="email">Email Address</label>
+				  <input type="email" class="form-control" placeholder="name@site.com" id="email" name="email" />
+				</div>
+				<div class="form-group">
+				  <label class="col-form-label" for="password">Password</label>
+				  <input type="password" class="form-control" placeholder="password" id="password" name="password" />
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+		    	<h3 class="text-center">OR</h3>
+		    	<a href="/register" class="btn btn-info btn-block">Click Here To Register</a>
+		    </form>
+		  </div>
+		</div>	
+	</div>
+</div>

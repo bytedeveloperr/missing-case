@@ -1,0 +1,23 @@
+<%- layout("./layouts/main") %>
+
+<h5>Browse Cases</h5>
+<div class="row">
+	<% if(data.length < 1) {%>
+		<h4 class="text-muted text-center mx-auto d-block">No Reported Cases</h4>
+	<%} else {%>
+	<% data.forEach(d => {%>
+	<div class="col-md-6 col-lg-4">
+		<div class="card mb-3">
+		  <img class="card-img-top" src="<%= d.image %>" alt="<%= d.fullName %>">
+		  <div class="card-body">
+		  	<ul class="list-unstyled">
+		  		<li class="mb-1">Name: <b><%= d.fullName %></b></li>
+		  		<li class="mb-1">Age: <b><%= d.age %></b></li>
+		  		<li class="mb-1">Last seen: 3 days ago</li>
+		  	</ul>
+		    <a href="/case/<%= d._id %>" class="card-link mt-1">view details &rarr;</a>
+		  </div>
+		</div>
+	</div>
+	<%})}%>
+</div>
